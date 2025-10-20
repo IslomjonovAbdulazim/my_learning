@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CarouselPage extends StatefulWidget {
   const CarouselPage({super.key});
@@ -10,10 +11,17 @@ class CarouselPage extends StatefulWidget {
 
 class _CarouselPageState extends State<CarouselPage> {
   List<String> images = [
-    "https://i.pinimg.com/736x/bd/ec/ea/bdecea0788a51112bd9355850f1b1697.jpg",
-    "https://i.pinimg.com/736x/8d/33/80/8d3380e3d13f368c156df01ada661766.jpg",
-    "https://wallpaperswide.com/download/breathtaking_nature-wallpaper-1600x900.jpg",
-    "https://i.pinimg.com/736x/cb/64/33/cb643340343d0f6259fdd7492d9fb000.jpg",
+    "assets/img1.png",
+    "assets/img2.png",
+    "assets/img3.png",
+    "assets/img4.png",
+  ];
+  List<String> names = [
+    "Abduazim",
+    "Bahodir",
+    "Fayzulloh",
+    "Abdurahmon",
+    "Behzod",
   ];
 
   @override
@@ -27,8 +35,52 @@ class _CarouselPageState extends State<CarouselPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CarouselSlider(
-                  options: CarouselOptions(),
-                  items: [],
+                  options: CarouselOptions(
+                    height: 200,
+                    autoPlay: true,
+                    autoPlayInterval: Duration(seconds: 5),
+                    enlargeCenterPage: true,
+                    enlargeFactor: 0.2,
+                    viewportFraction: 0.85,
+                  ),
+                  items: images
+                      .map(
+                        (value) => ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: Image.asset(
+                            value,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      )
+                      .toList(),
+                ),
+                Divider(),
+                CarouselSlider(
+                  options: CarouselOptions(
+                    autoPlay: true,
+                    enlargeCenterPage: true,
+                  ),
+                  items: names
+                      .map(
+                        (value) => Container(
+                          decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: Center(
+                            child: Text(
+                              value,
+                              style: GoogleFonts.tangerine(
+                                color: Colors.white,
+                                fontSize: 60,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                      .toList(),
                 ),
               ],
             ),
