@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -11,6 +12,8 @@ class AudioplayersPage extends StatefulWidget {
 }
 
 class _AudioplayersPageState extends State<AudioplayersPage> {
+  final player = AudioPlayer();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +44,9 @@ class _AudioplayersPageState extends State<AudioplayersPage> {
                       child: FaIcon(FontAwesomeIcons.backward, size: 30),
                     ),
                     CupertinoButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        player.play(AssetSource("assets/kurgim_kelar.mp3"));
+                      },
                       child: FaIcon(FontAwesomeIcons.play, size: 30),
                     ),
                     CupertinoButton(
