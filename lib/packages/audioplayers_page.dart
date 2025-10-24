@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AudioplayersPage extends StatefulWidget {
@@ -27,6 +28,27 @@ class _AudioplayersPageState extends State<AudioplayersPage> {
                     fontWeight: FontWeight.w800,
                     height: 1,
                   ),
+                ),
+                // ... Slider
+
+                // ... Controllers
+                SizedBox(height: 8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CupertinoButton(
+                      onPressed: () {},
+                      child: FaIcon(FontAwesomeIcons.backward, size: 30),
+                    ),
+                    CupertinoButton(
+                      onPressed: () {},
+                      child: FaIcon(FontAwesomeIcons.play, size: 30),
+                    ),
+                    CupertinoButton(
+                      onPressed: () {},
+                      child: FaIcon(FontAwesomeIcons.forward, size: 30),
+                    ),
+                  ],
                 ),
               ],
             ),
