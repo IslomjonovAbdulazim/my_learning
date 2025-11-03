@@ -8,6 +8,7 @@ import 'package:my_learning/packages/loading_package_page.dart';
 import 'package:my_learning/packages/url_launcher_page.dart';
 import 'package:my_learning/widgets/app_bar_example.dart';
 import 'package:my_learning/widgets/list_tile_example.dart';
+import 'package:my_learning/widgets/list_view_example.dart';
 import 'package:my_learning/widgets/scroll_example.dart';
 import 'package:toastification/toastification.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
     return ToastificationWrapper(
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: ScrollExample(),
+        home: ListViewExample(),
       ),
     );
   }

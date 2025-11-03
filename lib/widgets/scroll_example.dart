@@ -15,16 +15,34 @@ class _ScrollExampleState extends State<ScrollExample> {
         child: Padding(
           padding: EdgeInsets.all(16),
           child: Center(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  for (int i = 0; i < 10; i++)
-                    Container(
-                      height: 200,
-                      color: i.isEven ? Colors.red : Colors.indigo,
+            child: Column(
+              children: [
+                // Chapdan O'nga (horizontal)
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Container(height: 200, width: 200, color: Colors.red),
+                      Container(height: 200, width: 200, color: Colors.blue),
+                      Container(height: 200, width: 200, color: Colors.yellow),
+                    ],
+                  ),
+                ),
+                // Tepadan Pastga (vertical)
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        for (int i = 0; i < 10; i++)
+                          Container(
+                            height: 200,
+                            color: i.isEven ? Colors.red : Colors.indigo,
+                          ),
+                      ],
                     ),
-                ],
-              ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
