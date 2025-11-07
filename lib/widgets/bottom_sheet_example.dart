@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class BottomSheetExample extends StatefulWidget {
@@ -17,7 +18,23 @@ class _BottomSheetExampleState extends State<BottomSheetExample> {
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [],
+              children: [
+                CupertinoButton(
+                  color: Colors.yellow,
+                  onPressed: () {
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) {
+                        return Container(
+                          height: 300,
+                          color: Colors.green,
+                        );
+                      }
+                    );
+                  },
+                  child: Text("Bottom Sheet"),
+                ),
+              ],
             ),
           ),
         ),
