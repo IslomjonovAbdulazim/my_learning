@@ -24,10 +24,16 @@ class _BottomSheetExampleState extends State<BottomSheetExample> {
                   onPressed: () {
                     showModalBottomSheet(
                       context: context,
+                      backgroundColor: Colors.red,
                       builder: (context) {
-                        return Container(
-                          height: 300,
-                          color: Colors.green,
+                        return Center(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text("Abduazim"),
+                              Text("Islomjonov"),
+                            ],
+                          ),
                         );
                       }
                     );
