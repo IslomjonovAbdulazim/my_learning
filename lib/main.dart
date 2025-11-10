@@ -10,9 +10,11 @@ import 'package:my_learning/projects/list_view_horizontal_project.dart';
 import 'package:my_learning/projects/list_view_project.dart';
 import 'package:my_learning/widgets/app_bar_example.dart';
 import 'package:my_learning/widgets/bottom_sheet_example.dart';
+import 'package:my_learning/widgets/drawer_example.dart';
 import 'package:my_learning/widgets/grid_view_example.dart';
 import 'package:my_learning/widgets/list_tile_example.dart';
 import 'package:my_learning/widgets/list_view_example.dart';
+import 'package:my_learning/widgets/page_view_example.dart';
 import 'package:my_learning/widgets/scroll_example.dart';
 import 'package:my_learning/widgets/snack_bar_example.dart';
 import 'package:toastification/toastification.dart';
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
     return ToastificationWrapper(
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: BottomSheetExample(),
+        home: PageViewExample(),
       ),
     );
   }

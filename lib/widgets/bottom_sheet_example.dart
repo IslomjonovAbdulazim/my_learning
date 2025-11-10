@@ -26,16 +26,29 @@ class _BottomSheetExampleState extends State<BottomSheetExample> {
                       context: context,
                       backgroundColor: Colors.red,
                       builder: (context) {
-                        return Center(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Text("Abduazim"),
-                              Text("Islomjonov"),
-                            ],
+                        return SafeArea(
+                          child: Padding(
+                            padding: const EdgeInsets.all(16),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(),
+                                Text("Amallar"),
+                                CupertinoButton(
+                                  onPressed: () {},
+                                  child: Text("O'chirish"),
+                                ),
+
+                                CupertinoButton(
+                                  onPressed: () {},
+                                  child: Text("Qo'shish"),
+                                ),
+                              ],
+                            ),
                           ),
                         );
-                      }
+                      },
                     );
                   },
                   child: Text("Bottom Sheet"),
