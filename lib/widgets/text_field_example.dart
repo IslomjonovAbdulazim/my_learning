@@ -8,6 +8,8 @@ class TextFieldExample extends StatefulWidget {
 }
 
 class _TextFieldExampleState extends State<TextFieldExample> {
+  final nameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +19,12 @@ class _TextFieldExampleState extends State<TextFieldExample> {
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [],
+              children: [
+                // Simple Example
+                TextField(),
+                // Ism
+
+              ],
             ),
           ),
         ),
