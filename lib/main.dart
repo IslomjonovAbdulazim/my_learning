@@ -7,6 +7,7 @@ import 'package:my_learning/packages/audioplayers_page.dart';
 import 'package:my_learning/packages/font_awesome_page.dart';
 import 'package:my_learning/packages/loading_package_page.dart';
 import 'package:my_learning/packages/pushable_button_page.dart';
+import 'package:my_learning/packages/smooth_page_indicator_page.dart';
 import 'package:my_learning/packages/url_launcher_page.dart';
 import 'package:my_learning/projects/grid_view_project.dart';
 import 'package:my_learning/projects/list_view_horizontal_project.dart';
@@ -23,6 +24,7 @@ import 'package:my_learning/widgets/list_view_example.dart';
 import 'package:my_learning/widgets/page_view_example.dart';
 import 'package:my_learning/widgets/scroll_example.dart';
 import 'package:my_learning/widgets/snack_bar_example.dart';
+import 'package:my_learning/widgets/text_field_example.dart';
 import 'package:toastification/toastification.dart';
 
 void main() {
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
     return ToastificationWrapper(
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Navigation1Project(),
+        home: TextFieldExample(),
       ),
     );
   }
